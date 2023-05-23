@@ -3,7 +3,7 @@
 # Solution:  See the attached task3.py file in the Resources of the next lecture.
 
 class User:
-    def __int__(self, name, birth_year):
+    def __init__(self, name, birth_year):
         self.name = name
         self.birth_year = birth_year
 

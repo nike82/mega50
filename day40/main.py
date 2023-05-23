@@ -44,7 +44,7 @@ class Email:
 
 
 class Database:
-    def __int__(self, database_path):
+    def __init__(self, database_path):
         self.connection = sqlite3.connect(database_path)
 
     def store(self, extracted):
