@@ -4,7 +4,7 @@ df = pd.read_csv("hotels.csv", dtype={"id": str})
 
 
 class Hotel:
-    def __int__(self, hotel_id):
+    def __init__(self, hotel_id):
         self.hotel_id = hotel_id
         self.name = df.loc[df["id"] == self.hotel_id, "name"].squeeze()
 
@@ -22,7 +22,7 @@ class Hotel:
 
 
 class ReservationTicket:
-    def __int__(self, customer_name, hotel_object):
+    def __init__(self, customer_name, hotel_object):
         self.customer_name = customer_name
         self.hotel = hotel_object
 
