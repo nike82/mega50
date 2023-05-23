@@ -5,7 +5,7 @@ df = pd.read_csv("articles.csv", dtype={"id": str})
 
 
 class Article:
-    def __int__(self, article_id):
+    def __init__(self, article_id):
         self.article_id = article_id
         self.article_name = df.loc[df["id"] == self.article_id, "name"].squeeze()
         self.article_price = df.loc[df["id"] == self.article_id, "price"].squeeze()
@@ -22,7 +22,7 @@ class Article:
 
 
 class Receipt:
-    def __int__(self, article_object):
+    def __init__(self, article_object):
         self.article = article_object
 
     def generate(self):
